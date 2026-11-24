@@ -1,0 +1,265 @@
+<!doctype html>
+<!-- Declara que este documento usa HTML5. -->
+<html lang="pt-BR">
+  <!-- lang informa o idioma principal da página. -->
+  <head>
+    <!-- Define a codificação para exibir acentos e cedilha corretamente. -->
+    <meta charset="UTF-8" />
+
+    <!-- Faz a página se adaptar à largura de celulares e outros dispositivos. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Descrição curta que pode aparecer nos resultados de busca. -->
+    <meta
+      name="description"
+      content="Guia básico de HTML com exemplos comentados."
+    />
+
+    <!-- Texto mostrado na aba do navegador. -->
+    <title>Guia básico de HTML</title>
+  </head>
+
+  <body>
+    <!-- O conteúdo visível da página fica dentro de body. -->
+    <header>
+      <h1>Guia básico de HTML</h1>
+      <p>Uma página de consulta com os elementos mais usados.</p>
+
+      <!-- Links internos levam a uma seção da mesma página. -->
+      <nav aria-label="Navegação principal">
+        <a href="#texto">Texto</a> | <a href="#estilos">Estilos</a> |
+        <a href="#listas">Listas</a> |
+        <a href="#links-imagens">Links e imagens</a> |
+        <a href="#tabela">Tabela</a> |
+        <a href="#formulario">Formulário</a>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Cada section reúne conteúdo sobre um assunto. O id permite criar links até ela. -->
+      <section id="texto">
+        <h2>1. Títulos e textos</h2>
+
+        <!-- Use h1 para o título principal e h2 a h6 para subtítulos em níveis. -->
+        <h3>Um subtítulo</h3>
+
+        <!-- p cria um parágrafo. -->
+        <p>
+          Este é um parágrafo. O navegador organiza o texto e quebra as linhas
+          automaticamente.
+        </p>
+
+        <!-- strong indica importância; em geral aparece em negrito. -->
+        <p>Este trecho é <strong>importante</strong>.</p>
+
+        <!-- em dá ênfase ao trecho; em geral aparece em itálico. -->
+        <p>Este trecho tem <em>ênfase</em>.</p>
+
+        <!-- br força uma quebra de linha. Use com moderação; não use para criar espaçamento entre seções. -->
+        <p>Primeira linha<br />Segunda linha</p>
+
+        <!-- hr representa uma mudança de assunto, geralmente exibida como uma linha horizontal. -->
+        <hr />
+
+        <!-- Comentários HTML não aparecem na página. Use-os para deixar anotações no código. -->
+        <!-- Este é um comentário. -->
+      </section>
+
+      <section id="estilos">
+        <h2>Estilos: aparência da página</h2>
+
+        <!-- Estilos são características visuais, como cores, fontes, tamanhos, alinhamento e espaçamento. -->
+        <!-- Normalmente essas características são definidas com CSS. Esta seção explica a ideia sem usar CSS. -->
+        <p>
+          O HTML organiza e dá significado ao conteúdo. O navegador aplica uma
+          aparência padrão aos elementos: por exemplo, os títulos costumam
+          aparecer maiores, os links coloridos e os itens de listas recuados.
+          Essas aparências padrão não são estilos definidos por esta página.
+        </p>
+
+        <h3>O que o HTML pode indicar</h3>
+        <ul>
+          <li>
+            <code>h1</code> a <code>h6</code>: níveis de título. O navegador
+            costuma mostrar cada nível com tamanho diferente.
+          </li>
+          <li>
+            <code>strong</code>: conteúdo importante; costuma aparecer em
+            negrito.
+          </li>
+          <li>
+            <code>em</code>: conteúdo enfatizado; costuma aparecer em itálico.
+          </li>
+          <li>
+            <code>ul</code>, <code>ol</code> e <code>li</code>: organizam itens
+            em listas.
+          </li>
+          <li>
+            <code>header</code>, <code>main</code>, <code>section</code> e
+            <code>footer</code>: organizam áreas da página pelo seu significado.
+          </li>
+        </ul>
+
+        <h3>O que são estilos visuais</h3>
+        <p>
+          Cor de fundo, cor do texto, tipo e tamanho da fonte, margens,
+          espaçamento, bordas e posição dos elementos são exemplos de estilos. O
+          HTML sozinho não é a ferramenta adequada para controlar esses
+          detalhes. Mais adiante, o CSS será usado para definir essa aparência.
+        </p>
+
+        <h3>Exemplo: significado e aparência</h3>
+        <p><strong>Atenção:</strong> este texto indica importância.</p>
+        <p><em>Observação:</em> este texto recebe ênfase.</p>
+        <!-- As tags acima dão significado. O negrito e o itálico são a aparência padrão do navegador. -->
+        <!-- Escolha tags pelo significado do conteúdo, não apenas para deixá-lo bonito. -->
+      </section>
+
+      <section id="listas">
+        <h2>2. Listas</h2>
+
+        <!-- ul cria uma lista sem ordem numérica; cada item fica em li. -->
+        <h3>Lista não ordenada</h3>
+        <ul>
+          <li>HTML estrutura o conteúdo.</li>
+          <li>CSS cuida da aparência.</li>
+          <li>JavaScript adiciona interatividade.</li>
+        </ul>
+
+        <!-- ol cria uma lista numerada. -->
+        <h3>Lista ordenada</h3>
+        <ol>
+          <li>Crie um arquivo com final .html.</li>
+          <li>Escreva a estrutura HTML.</li>
+          <li>Abra o arquivo no navegador.</li>
+        </ol>
+      </section>
+
+      <section id="links-imagens">
+        <h2>3. Links e imagens</h2>
+
+        <!-- href recebe o destino. target="_blank" abre outra aba; rel protege essa abertura. -->
+        <p>
+          <a
+            href="https://developer.mozilla.org/pt-BR/docs/Web/HTML"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Consulte a documentação de HTML (abre em outra aba)
+          </a>
+        </p>
+
+        <!-- Uma imagem local precisa estar no caminho indicado. O alt descreve a imagem para acessibilidade. -->
+        <!-- Exemplo: coloque uma imagem chamada foto.jpg na mesma pasta e retire os comentários abaixo. -->
+        <!-- <img src="foto.jpg" alt="Descrição objetiva do que aparece na foto" width="300" /> -->
+
+        <!-- Uma imagem decorativa pode usar alt vazio; uma imagem informativa precisa de uma descrição útil. -->
+      </section>
+
+      <section id="tabela">
+        <h2>4. Tabelas</h2>
+
+        <!-- Use tabelas para dados organizados em linhas e colunas, não para montar o layout da página. -->
+        <table>
+          <!-- caption fornece um título/descrição para a tabela. -->
+          <caption>
+            Exemplo de horários
+          </caption>
+          <thead>
+            <tr>
+              <!-- th identifica uma célula de cabeçalho. scope ajuda tecnologias assistivas. -->
+              <th scope="col">Dia</th>
+              <th scope="col">Atividade</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <!-- td é uma célula de dado comum. -->
+              <th scope="row">Segunda-feira</th>
+              <td>Estudar HTML</td>
+            </tr>
+            <tr>
+              <th scope="row">Quarta-feira</th>
+              <td>Praticar exercícios</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section id="formulario">
+        <h2>5. Formulários</h2>
+
+        <!-- form agrupa campos. action e method são configurados quando existe um destino para os dados. -->
+        <form action="#" method="get">
+          <!-- label ligado ao campo pelo mesmo valor em for e id. Isso facilita o uso do formulário. -->
+          <p>
+            <label for="nome">Nome:</label><br />
+            <input
+              type="text"
+              id="nome"
+              name="nome"
+              placeholder="Digite seu nome"
+              required
+            />
+          </p>
+
+          <p>
+            <label for="email">E-mail:</label><br />
+            <!-- type="email" permite ao navegador verificar o formato básico do endereço. -->
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="voce@exemplo.com"
+              required
+            />
+          </p>
+
+          <p>
+            <label for="assunto">Assunto:</label><br />
+            <!-- select cria uma lista de opções; cada opção usa option. -->
+            <select id="assunto" name="assunto">
+              <option value="duvida">Dúvida</option>
+              <option value="sugestao">Sugestão</option>
+              <option value="outro">Outro</option>
+            </select>
+          </p>
+
+          <p>
+            <label for="mensagem">Mensagem:</label><br />
+            <!-- textarea cria um campo de texto com várias linhas. -->
+            <textarea
+              id="mensagem"
+              name="mensagem"
+              rows="5"
+              cols="40"
+              placeholder="Escreva sua mensagem"
+            ></textarea>
+          </p>
+
+          <!-- O botão submit envia o formulário. Sem um servidor configurado, os dados não são armazenados. -->
+          <button type="submit">Enviar</button>
+
+          <!-- type="reset" limpa os campos. Exemplo: <button type="reset">Limpar</button> -->
+        </form>
+      </section>
+
+      <section>
+        <h2>6. Elementos semânticos</h2>
+        <p>
+          <code>header</code> representa o cabeçalho; <code>nav</code>, a
+          navegação; <code>main</code>, o conteúdo principal;
+          <code>section</code>, um grupo temático; <code>article</code>, um
+          conteúdo independente; e <code>footer</code>, o rodapé.
+        </p>
+        <!-- Escolher elementos pelo significado ajuda leitores de tela, navegadores e manutenção do código. -->
+      </section>
+    </main>
+
+    <footer>
+      <p>Fim do guia. Edite os textos e exemplos para praticar.</p>
+      <!-- &copy; exibe o símbolo ©. Entidades HTML também podem representar caracteres especiais. -->
+      <small>&copy; 2026 - Guia de estudo</small>
+    </footer>
+  </body>
+</html>

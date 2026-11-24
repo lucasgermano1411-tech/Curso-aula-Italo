@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- ============================================= -->
+    <!-- 1. TABELA BÁSICA COM BORDA -->
+    <!-- border="1" cria uma borda externa e grade interna de 1px -->
+    <table border="1">
+      <tr>
+        <td>Linha 1, Coluna 1</td>
+        <td>Linha 1, Coluna 2</td>
+      </tr>
+      <tr>
+        <td>Linha 2, Coluna 1</td>
+        <td>Linha 2, Coluna 2</td>
+      </tr>
+    </table>
+
+    <!-- ============================================= -->
+    <!-- 2. TABELA SEM BORDA -->
+    <!-- border="0" (ou se o atributo for omitido) remove as linhas de grade -->
+    <!-- mas o alinhamento das colunas continua funcionando normalmente -->
+    <table border="0">
+      <tr>
+        <td>Sem</td>
+        <td>linhas</td>
+        <td>visíveis</td>
+      </tr>
+      <tr>
+        <td>mas</td>
+        <td>colunas</td>
+        <td>alinhadas</td>
+      </tr>
+    </table>
+
+    <!-- ============================================= -->
+    <!-- 3. LARGURA E ALTURA (width / height) -->
+    <!-- width="400" = largura fixa em pixels -->
+    <!-- height="100" = altura fixa em pixels -->
+    <table border="1" width="400" height="100">
+      <tr>
+        <td>Largura fixa em pixels (400)</td>
+      </tr>
+    </table>
+
+    <!-- width="80%" = largura relativa (80% do elemento pai, geralmente a tela) -->
+    <table border="1" width="80%">
+      <tr>
+        <td>Largura em porcentagem da tela (80%)</td>
+      </tr>
+    </table>
+
+    <!-- ============================================= -->
+    <!-- 4. ALINHAMENTO (align) + TEXTO AO LADO -->
+    <!-- align="right" alinha a tabela à direita da página -->
+    <!-- (também pode ser "left" ou "center") -->
+    <!-- o texto escrito logo após </table> flui ao lado dela -->
+    <table align="right" border="1" width="200">
+      <tr>
+        <td>Tabela alinhada à direita</td>
+      </tr>
+    </table>
+    <p>
+      Este texto flui ao lado da tabela, pois ela está alinhada com
+      align="right" (ou "left").
+    </p>
+
+    <!-- clear:both é usado depois para "limpar" o alinhamento -->
+    <!-- e evitar que o conteúdo seguinte continue grudado na tabela -->
+    <div style="clear: both"></div>
+
+    <!-- ============================================= -->
+    <!-- 5. COR DE FUNDO (bgcolor) -->
+    <!-- bgcolor funciona em <table>, <tr> e <td> -->
+    <!-- a cor mais "interna" (td) tem prioridade sobre a mais externa (table) -->
+    <table border="1" bgcolor="#ffff00" width="300">
+      <tr>
+        <!-- esta linha não define bgcolor, então herda o amarelo da table -->
+        <td>Fundo amarelo (herdado da table)</td>
+      </tr>
+      <tr bgcolor="lightblue">
+        <!-- bgcolor definido na <tr>, vale para toda a linha -->
+        <td>Fundo azul claro (definido na tr)</td>
+      </tr>
+      <tr>
+        <!-- bgcolor definido direto na <td>, vale só para essa célula -->
+        <td bgcolor="#90ee90">Fundo verde (definido direto na td)</td>
+      </tr>
+    </table>
+
+    <!-- ============================================= -->
+    <!-- 6. COR ÚNICA DE BORDA (bordercolor) -->
+    <!-- bordercolor define uma cor só para toda a borda (externa + grade) -->
+    <table border="4" bordercolor="red" width="300">
+      <tr>
+        <td>Borda vermelha em toda a tabela</td>
+      </tr>
+    </table>
+
+    <!-- ============================================= -->
+    <!-- 7. EFEITO 3D (bordercolorlight / bordercolordark) -->
+    <!-- bordercolorlight = cor da parte "clara" da borda (topo/esquerda) -->
+    <!-- bordercolordark  = cor da parte "escura" da borda (direita/baixo) -->
+    <!-- cria uma sensação de profundidade (relevo) na borda -->
+    <!-- obs: funciona melhor em navegadores antigos (ex: Internet Explorer) -->
+    <table
+      border="6"
+      bordercolorlight="#ffffff"
+      bordercolordark="#000080"
+      width="300"
+    >
+      <tr>
+        <td>Efeito 3D: claro no topo/esquerda, escuro embaixo/direita</td>
+      </tr>
+    </table>
+
+    <!-- ============================================= -->
+    <!-- 8. COMBINANDO VÁRIOS ATRIBUTOS -->
+    <!-- align="center"    -> centraliza a tabela na página -->
+    <!-- border="3"        -> espessura da borda -->
+    <!-- width / height    -> dimensões da tabela -->
+    <!-- bgcolor           -> cor de fundo -->
+    <!-- bordercolor       -> cor da borda -->
+    <table
+      align="center"
+      border="3"
+      width="500"
+      height="150"
+      bgcolor="#f0f8ff"
+      bordercolor="navy"
+    >
+      <tr>
+        <td>Centralizada</td>
+        <td>Com largura, altura,</td>
+        <td>fundo e cor de borda definidos</td>
+      </tr>
+    </table>
+  </body>
+</html>
